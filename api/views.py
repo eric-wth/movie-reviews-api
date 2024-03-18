@@ -8,7 +8,7 @@ from rest_framework.throttling import UserRateThrottle
 
 
 class MoviesApiView(APIView):    
-    #lists all the movies
+    #returns all the movies
     def get(self, request):
         movies = Movies.objects.all()
         serializer = MoviesSerializer(movies, many = True)
