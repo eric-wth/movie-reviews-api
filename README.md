@@ -16,8 +16,10 @@ Rate Limiting: API endpoints are protected with rate limiting to prevent abuse a
 Pagination: Results are paginated to improve performance and provide a better user experience.
 
 ## Technologies Used
-Backend Framework: Python with Django for building the RESTful API endpoints
-Database: SQLite for storing movie and review data
+Backend Framework: Python with Django for building the RESTful API endpoints.
+
+Database: SQLite for storing movie and review data.
+
 Authentication: JSON Web Tokens (JWT) for user authentication and authorization
 
 ## Installation
