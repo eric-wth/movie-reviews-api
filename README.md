@@ -1,13 +1,24 @@
-# Movie Reviews App
-The Movie Review App is a web application that allows users to discover movies, read reviews, and write their own reviews for movies they have watched. This README provides an overview of the app, including its features, installation instructions, and usage guidelines.
+# Movie Reviews API
+The Movies Review API is a RESTful web service designed to facilitate the management and retrieval of movie reviews. This project enables users to register, log in securely, add movies to the database, and contribute reviews for those movies. By providing a simple yet powerful API, developers can integrate movie review functionality into various applications, such as movie databases or social media platforms.
 
 ## Features
 User Authentication: Users can sign up for an account or log in using their existing credentials.
-Browse Movies: Users can browse a collection of movies, view details about each movie, and read reviews written by other users.
+
+Movie Management: Authorized users can add new movies to the database by providing details such as title, release year, genre, director, and cast. Movies can also be updated or deleted as needed.
+Users can browse a collection of movies, view details about each movie, and read reviews written by other users.
+
 Write Reviews: Authenticated users can write and submit reviews for movies they have watched.
+
 View User Reviews: Users can see all the reviews they have written.
+
 Rate Limiting: API endpoints are protected with rate limiting to prevent abuse and ensure fair usage.
+
 Pagination: Results are paginated to improve performance and provide a better user experience.
+
+## Technologies Used
+Backend Framework: Python with Django for building the RESTful API endpoints
+Database: SQLite for storing movie and review data
+Authentication: JSON Web Tokens (JWT) for user authentication and authorization
 
 ## Installation
 To run the Movie Review App locally, follow these steps:
