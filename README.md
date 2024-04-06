@@ -20,7 +20,7 @@ Backend Framework: Python with Django for building the RESTful API endpoints.
 
 Database: SQLite for storing movie and review data.
 
-Authentication: JSON Web Tokens (JWT) for user authentication and authorization
+Authentication: Token-based user authentication and authorization
 
 ## Installation
 To run the Movie Review App locally, follow these steps:
