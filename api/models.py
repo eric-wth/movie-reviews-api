@@ -40,3 +40,10 @@ class Reviews(models.Model):
 class Favourites(models.Model):
     user = models.ForeignKey(Users, on_delete = models.CASCADE)
     movie = models.ForeignKey(Movies, on_delete = models.CASCADE) 
+
+class Comments(models.Model):
+    movie = models.ForeignKey(Movies, related_name='comments', on_delete=models.CASCADE)
+    user = models.ForeignKey(Users, on_delete=models.CASCADE)
+    content = models.TextField()
+    parent = models.ForeignKey('self', related_name='replies', null=True, blank=True, on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)

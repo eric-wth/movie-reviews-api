@@ -1,8 +1,8 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from .models import Movies, Reviews
-from .serializers import MoviesSerializer, ReviewsSerializer
+from .models import Movies, Reviews, Comments
+from .serializers import MoviesSerializer, ReviewsSerializer, CommentsSerializer
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.throttling import UserRateThrottle
 
@@ -133,3 +133,10 @@ class ReviewDetailAPIView(APIView):
         serializer = ReviewsSerializer(review_instances, many = True)
 
         return Response(serializer.data, status = status.HTTP_200_OK)
+    
+class CommentDetailAPIView(APIView):
+    def get(self, request):
+        comments = Comments.objects.all()
+        serializer = CommentsSerializer(comments, many = True)
+        return Response(serializer.data, status = status.HTTP_200_OK)
+    
